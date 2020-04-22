@@ -52,32 +52,32 @@ class ListNode:
         if self.next:
             self.next.prev = self.prev
 
-nodes = ListNode(0)
-nodes.insert_after(1)
-nodes.next.insert_after(2)
-nodes.next.next.insert_after(3)
-nodes.next.next.next.insert_after(4)
+# nodes = ListNode(0)
+# nodes.insert_after(1)
+# nodes.next.insert_after(2)
+# nodes.next.next.insert_after(3)
+# nodes.next.next.next.insert_after(4)
 
-def reverse_list(head):
-    n_prev = None
-    n_cur = head
-    n_next = None
-    while n_cur:
-        n_next = n_cur.next
-        n_cur.next = n_prev
-        n_prev = n_cur
-        n_cur = n_next
-    return n_prev
+# def reverse_list(head):
+#     n_prev = None
+#     n_cur = head
+#     n_next = None
+#     while n_cur:
+#         n_next = n_cur.next
+#         n_cur.next = n_prev
+#         n_prev = n_cur
+#         n_cur = n_next
+#     return n_prev
 
 
-node_cur = reverse_list(nodes)
-node_val = node_cur.value
-while True:
-    print(node_val)
-    node_cur = node_cur.next
-    if node_cur is None:
-        break
-    node_val = node_cur.value
+# node_cur = reverse_list(nodes)
+# node_val = node_cur.value
+# while True:
+#     print(node_val)
+#     node_cur = node_cur.next
+#     if node_cur is None:
+#         break
+#     node_val = node_cur.value
 
 """Our doubly-linked list class. It holds references to
 the list's head and tail nodes."""

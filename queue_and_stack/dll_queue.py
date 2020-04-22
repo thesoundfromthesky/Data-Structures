@@ -10,7 +10,7 @@ class Queue:
         # We can reuse functions implemented in DLL.
         # first in first out
         self.storage = DoublyLinkedList()
-
+ 
     def enqueue(self, value):
         self.storage.add_to_tail(value)
 

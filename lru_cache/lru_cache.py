@@ -13,6 +13,9 @@ class LRUCache:
     def __init__(self, limit=10):
         self.limit = limit
         self.storage = DoublyLinkedList()
+        #self.storage={}
+        #self.size=0
+ 
 
     """
     Retrieves the value associated with the given key. Also
@@ -51,8 +54,8 @@ class LRUCache:
                 return                      
             cur = cur.next
 
-        if self.storage.__len__() < self.limit:
-            # add item to head
+        if len(self.storage) < self.limit:
+            # add item to tail
             self.storage.add_to_tail({key: value})    
         else:
             self.storage.remove_from_head()
